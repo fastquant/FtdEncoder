@@ -931,7 +931,7 @@
         </typeDefine>
         <typeDefine name="FTDErrorCode" baseType="FTDStringType&lt;10&gt;" length="10" precision="0"/>
         <typeDefine name="FTDForceExitCode" baseType="FTDCharType" length="1" precision="0">
-            <enumValue name="0" comment="目前应该为 0"/>
+            <enumValue name="0" comment="目前应该为0"/>
         </typeDefine>
         <typeDefine name="FTDHedgeFlag" baseType="FTDCharType" length="1" precision="0">
             <enumValue name="1" comment="投机"/>
@@ -946,10 +946,10 @@
             <enumValue name="4" comment="非交易"/>
         </typeDefine>
         <typeDefine name="FTDInstrumentType" baseType="FTDCharType" length="1" precision="0">
-            <enumValue name="0" comment="目前应该为 0"/>
+            <enumValue name="0" comment="目前应该为0"/>
         </typeDefine>
         <typeDefine name="FTDInstrumentVersion" baseType="FTDCharType" length="1" precision="0">
-            <enumValue name="0" comment="目前应该为 0"/>
+            <enumValue name="0" comment="目前应该为0"/>
         </typeDefine>
         <typeDefine name="FTDLocalId" baseType="FTDStringType&lt;15&gt;" length="15" precision="0"/>
         <typeDefine name="FTDMarketId" baseType="FTDStringType&lt;10&gt;" length="10" precision="0"/>

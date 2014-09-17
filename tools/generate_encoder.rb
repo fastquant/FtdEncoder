@@ -19,6 +19,15 @@ class Generator
     end
     @fields = @root.xpath("fields/fieldDefine")
 
+    @fields_defs = {}
+    @fields.each do |f|
+      fname = f.attributes['name'].value
+      fid = f.attributes['fid'].value
+      fvalue = f.attributes['fidValue'].value
+      fcomment = f.attributes['fid'].value
+      @fields_defs[fname] = { fid: fid, fvalue: fvalue, fcomment: fcomment }
+    end
+
     @items = {}
     @root.xpath("items/itemDefine").each do |item|
       name = item.attributes['name'].value
@@ -35,9 +44,8 @@ class Generator
     out += "{\n"
     out += generate_type_classes
     out += generate_item_classes
-    out += generate_packet_classes
     out += generate_field_classes
-
+    out += generate_packet_classes
     out += "}\n"
     out
   end
@@ -55,11 +63,22 @@ class Generator
       if m
         base_type = m["base_type"]
       end
+      enums_text = ""
+      t.xpath("enumValue").each do |v|
+        vname = v.attributes['name'].value
+        vcomment = v.attributes['comment'].value
+        enums_text +=
+<<HERE
+       [Description("#{vcomment}"), Category("EnumValue")]
+       public static int VAL#{vname} = #{vname};
 
+HERE
+      end
       class_text =
-          <<HERE
+<<HERE
     public class #{clname} : #{base_type}
     {
+#{enums_text}
         public override int Length
         {
             get
@@ -98,6 +117,12 @@ HERE
       tid_value = @tids[tid]
       model = pkg.attributes['model'].value
       comment = pkg.attributes['comment'].value
+
+      pkg.xpath("field").each do |f|
+        fname = f.attributes['name'].value
+        max_occur = f.attributes['maxOccur'].value.to_i
+        min_occur = f.attributes['minOccur'].value.to_i
+      end
 
       class_text =
 <<HERE

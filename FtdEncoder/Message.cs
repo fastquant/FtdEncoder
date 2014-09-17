@@ -5,6 +5,16 @@ namespace FtdEncoder.Messages
 {
     public class FTDActionFlag : FTDCharType
     {
+       [Description("删除"), Category("EnumValue")]
+       public static int VAL0 = 0;
+
+       [Description("挂起"), Category("EnumValue")]
+       public static int VAL1 = 1;
+
+       [Description("激活"), Category("EnumValue")]
+       public static int VAL2 = 2;
+
+
         public override int Length
         {
             get
@@ -24,6 +34,13 @@ namespace FtdEncoder.Messages
 
     public class FTDBoolFlag : FTDCharType
     {
+       [Description("真"), Category("EnumValue")]
+       public static int VAL1 = 1;
+
+       [Description("假"), Category("EnumValue")]
+       public static int VAL0 = 0;
+
+
         public override int Length
         {
             get
@@ -43,6 +60,7 @@ namespace FtdEncoder.Messages
 
     public class FTDClientId : FTDStringType
     {
+
         public override int Length
         {
             get
@@ -62,6 +80,13 @@ namespace FtdEncoder.Messages
 
     public class FTDClientType : FTDCharType
     {
+       [Description("自然人"), Category("EnumValue")]
+       public static int VAL0 = 0;
+
+       [Description("法人"), Category("EnumValue")]
+       public static int VAL1 = 1;
+
+
         public override int Length
         {
             get
@@ -81,6 +106,7 @@ namespace FtdEncoder.Messages
 
     public class FTDConnectionReference : FTDStringType
     {
+
         public override int Length
         {
             get
@@ -100,6 +126,16 @@ namespace FtdEncoder.Messages
 
     public class FTDDataFlowFlag : FTDCharType
     {
+       [Description("对话流"), Category("EnumValue")]
+       public static int VAL0 = 0;
+
+       [Description("私有流"), Category("EnumValue")]
+       public static int VAL1 = 1;
+
+       [Description("广播流"), Category("EnumValue")]
+       public static int VAL2 = 2;
+
+
         public override int Length
         {
             get
@@ -119,6 +155,7 @@ namespace FtdEncoder.Messages
 
     public class FTDDate : FTDStringType
     {
+
         public override int Length
         {
             get
@@ -138,6 +175,7 @@ namespace FtdEncoder.Messages
 
     public class FTDDateTime : FTDStringType
     {
+
         public override int Length
         {
             get
@@ -157,6 +195,13 @@ namespace FtdEncoder.Messages
 
     public class FTDDirection : FTDCharType
     {
+       [Description("买"), Category("EnumValue")]
+       public static int VAL0 = 0;
+
+       [Description("卖"), Category("EnumValue")]
+       public static int VAL1 = 1;
+
+
         public override int Length
         {
             get
@@ -176,6 +221,7 @@ namespace FtdEncoder.Messages
 
     public class FTDErrorCode : FTDStringType
     {
+
         public override int Length
         {
             get
@@ -195,6 +241,10 @@ namespace FtdEncoder.Messages
 
     public class FTDForceExitCode : FTDCharType
     {
+       [Description("目前应该为0"), Category("EnumValue")]
+       public static int VAL0 = 0;
+
+
         public override int Length
         {
             get
@@ -214,6 +264,13 @@ namespace FtdEncoder.Messages
 
     public class FTDHedgeFlag : FTDCharType
     {
+       [Description("投机"), Category("EnumValue")]
+       public static int VAL1 = 1;
+
+       [Description("套期保值"), Category("EnumValue")]
+       public static int VAL3 = 3;
+
+
         public override int Length
         {
             get
@@ -233,6 +290,7 @@ namespace FtdEncoder.Messages
 
     public class FTDInstrumentId : FTDStringType
     {
+
         public override int Length
         {
             get
@@ -252,6 +310,22 @@ namespace FtdEncoder.Messages
 
     public class FTDInstrumentStatus : FTDCharType
     {
+       [Description("连续交易"), Category("EnumValue")]
+       public static int VAL0 = 0;
+
+       [Description("开盘集合竞价"), Category("EnumValue")]
+       public static int VAL1 = 1;
+
+       [Description("收盘集合竞价"), Category("EnumValue")]
+       public static int VAL2 = 2;
+
+       [Description("暂停"), Category("EnumValue")]
+       public static int VAL3 = 3;
+
+       [Description("非交易"), Category("EnumValue")]
+       public static int VAL4 = 4;
+
+
         public override int Length
         {
             get
@@ -271,6 +345,10 @@ namespace FtdEncoder.Messages
 
     public class FTDInstrumentType : FTDCharType
     {
+       [Description("目前应该为0"), Category("EnumValue")]
+       public static int VAL0 = 0;
+
+
         public override int Length
         {
             get
@@ -290,6 +368,10 @@ namespace FtdEncoder.Messages
 
     public class FTDInstrumentVersion : FTDCharType
     {
+       [Description("目前应该为0"), Category("EnumValue")]
+       public static int VAL0 = 0;
+
+
         public override int Length
         {
             get
@@ -309,6 +391,7 @@ namespace FtdEncoder.Messages
 
     public class FTDLocalId : FTDStringType
     {
+
         public override int Length
         {
             get
@@ -328,6 +411,7 @@ namespace FtdEncoder.Messages
 
     public class FTDMarketId : FTDStringType
     {
+
         public override int Length
         {
             get
@@ -347,6 +431,22 @@ namespace FtdEncoder.Messages
 
     public class FTDMarketStatus : FTDCharType
     {
+       [Description("连续交易"), Category("EnumValue")]
+       public static int VAL0 = 0;
+
+       [Description("开盘集合竞价"), Category("EnumValue")]
+       public static int VAL1 = 1;
+
+       [Description("收盘集合竞价"), Category("EnumValue")]
+       public static int VAL2 = 2;
+
+       [Description("暂停"), Category("EnumValue")]
+       public static int VAL3 = 3;
+
+       [Description("非交易"), Category("EnumValue")]
+       public static int VAL4 = 4;
+
+
         public override int Length
         {
             get
@@ -366,6 +466,22 @@ namespace FtdEncoder.Messages
 
     public class FTDMatchCondition : FTDCharType
     {
+       [Description("即时全部成交"), Category("EnumValue")]
+       public static int VAL1 = 1;
+
+       [Description("即时部分成交"), Category("EnumValue")]
+       public static int VAL2 = 2;
+
+       [Description("当日有效"), Category("EnumValue")]
+       public static int VAL3 = 3;
+
+       [Description("取消前有效"), Category("EnumValue")]
+       public static int VAL4 = 4;
+
+       [Description("指定日期前有效"), Category("EnumValue")]
+       public static int VAL5 = 5;
+
+
         public override int Length
         {
             get
@@ -385,6 +501,28 @@ namespace FtdEncoder.Messages
 
     public class FTDMatchSession : FTDCharType
     {
+       [Description("开盘集合竞价"), Category("EnumValue")]
+       public static int VAL1 = 1;
+
+       [Description("连续交易"), Category("EnumValue")]
+       public static int VAL2 = 2;
+
+       [Description("开盘集合竞价和连续交易"), Category("EnumValue")]
+       public static int VAL3 = 3;
+
+       [Description("收盘集合竞价"), Category("EnumValue")]
+       public static int VAL4 = 4;
+
+       [Description("开盘集合竞价和收盘集合竞价"), Category("EnumValue")]
+       public static int VAL5 = 5;
+
+       [Description("连续交易和收盘集合竞价"), Category("EnumValue")]
+       public static int VAL6 = 6;
+
+       [Description("开盘集合竞价,连续交易和收盘集合竞价"), Category("EnumValue")]
+       public static int VAL7 = 7;
+
+
         public override int Length
         {
             get
@@ -404,6 +542,16 @@ namespace FtdEncoder.Messages
 
     public class FTDMatchFlag : FTDCharType
     {
+       [Description("同为开仓"), Category("EnumValue")]
+       public static int VAL0 = 0;
+
+       [Description("同为平仓"), Category("EnumValue")]
+       public static int VAL1 = 1;
+
+       [Description("不同"), Category("EnumValue")]
+       public static int VAL2 = 2;
+
+
         public override int Length
         {
             get
@@ -423,6 +571,7 @@ namespace FtdEncoder.Messages
 
     public class FTDMsgRef : FTDStringType
     {
+
         public override int Length
         {
             get
@@ -442,6 +591,7 @@ namespace FtdEncoder.Messages
 
     public class FTDName : FTDStringType
     {
+
         public override int Length
         {
             get
@@ -461,6 +611,7 @@ namespace FtdEncoder.Messages
 
     public class FTDNewsType : FTDStringType
     {
+
         public override int Length
         {
             get
@@ -480,6 +631,7 @@ namespace FtdEncoder.Messages
 
     public class FTDNewsUrgency : FTDCharType
     {
+
         public override int Length
         {
             get
@@ -499,6 +651,19 @@ namespace FtdEncoder.Messages
 
     public class FTDOffsetFlag : FTDCharType
     {
+       [Description("开仓"), Category("EnumValue")]
+       public static int VAL0 = 0;
+
+       [Description("平仓"), Category("EnumValue")]
+       public static int VAL1 = 1;
+
+       [Description("强平"), Category("EnumValue")]
+       public static int VAL2 = 2;
+
+       [Description("强减"), Category("EnumValue")]
+       public static int VAL3 = 3;
+
+
         public override int Length
         {
             get
@@ -518,6 +683,25 @@ namespace FtdEncoder.Messages
 
     public class FTDOrderStatus : FTDCharType
     {
+       [Description("全部成交"), Category("EnumValue")]
+       public static int VAL0 = 0;
+
+       [Description("部分成交还在队列中"), Category("EnumValue")]
+       public static int VAL1 = 1;
+
+       [Description("部分成交不在队列中"), Category("EnumValue")]
+       public static int VAL2 = 2;
+
+       [Description("未成交还在队列中"), Category("EnumValue")]
+       public static int VAL3 = 3;
+
+       [Description("未成交不在队列中"), Category("EnumValue")]
+       public static int VAL4 = 4;
+
+       [Description("撤单"), Category("EnumValue")]
+       public static int VAL5 = 5;
+
+
         public override int Length
         {
             get
@@ -537,6 +721,28 @@ namespace FtdEncoder.Messages
 
     public class FTDOrderType : FTDCharType
     {
+       [Description("限价"), Category("EnumValue")]
+       public static int VAL0 = 0;
+
+       [Description("市价"), Category("EnumValue")]
+       public static int VAL1 = 1;
+
+       [Description("止损限价"), Category("EnumValue")]
+       public static int VAL2 = 2;
+
+       [Description("止损市价"), Category("EnumValue")]
+       public static int VAL3 = 3;
+
+       [Description("市价转限价"), Category("EnumValue")]
+       public static int VAL4 = 4;
+
+       [Description("最好价格"), Category("EnumValue")]
+       public static int VAL5 = 5;
+
+       [Description("均价"), Category("EnumValue")]
+       public static int VAL6 = 6;
+
+
         public override int Length
         {
             get
@@ -556,6 +762,7 @@ namespace FtdEncoder.Messages
 
     public class FTDParticipantId : FTDStringType
     {
+
         public override int Length
         {
             get
@@ -575,6 +782,22 @@ namespace FtdEncoder.Messages
 
     public class FTDParticipantType : FTDCharType
     {
+       [Description("自营"), Category("EnumValue")]
+       public static int VAL0 = 0;
+
+       [Description("经纪"), Category("EnumValue")]
+       public static int VAL1 = 1;
+
+       [Description("综合"), Category("EnumValue")]
+       public static int VAL2 = 2;
+
+       [Description("特别"), Category("EnumValue")]
+       public static int VAL3 = 3;
+
+       [Description("做市商"), Category("EnumValue")]
+       public static int VAL4 = 4;
+
+
         public override int Length
         {
             get
@@ -594,6 +817,7 @@ namespace FtdEncoder.Messages
 
     public class FTDPassword : FTDStringType
     {
+
         public override int Length
         {
             get
@@ -613,6 +837,7 @@ namespace FtdEncoder.Messages
 
     public class FTDPercent : FTDFloatType
     {
+
         public override int Length
         {
             get
@@ -632,6 +857,7 @@ namespace FtdEncoder.Messages
 
     public class FTDPrice : FTDFloatType
     {
+
         public override int Length
         {
             get
@@ -651,6 +877,7 @@ namespace FtdEncoder.Messages
 
     public class FTDProtocolVersion : FTDStringType
     {
+
         public override int Length
         {
             get
@@ -670,6 +897,13 @@ namespace FtdEncoder.Messages
 
     public class FTDPubStyle : FTDCharType
     {
+       [Description("不发布"), Category("EnumValue")]
+       public static int VAL0 = 0;
+
+       [Description("发布"), Category("EnumValue")]
+       public static int VAL1 = 1;
+
+
         public override int Length
         {
             get
@@ -689,6 +923,7 @@ namespace FtdEncoder.Messages
 
     public class FTDSequenceNo : FTDIntType
     {
+
         public override int Length
         {
             get
@@ -708,6 +943,7 @@ namespace FtdEncoder.Messages
 
     public class FTDSequenceSeries : FTDWordType
     {
+
         public override int Length
         {
             get
@@ -727,6 +963,7 @@ namespace FtdEncoder.Messages
 
     public class FTDServerAppName : FTDStringType
     {
+
         public override int Length
         {
             get
@@ -746,6 +983,10 @@ namespace FtdEncoder.Messages
 
     public class FTDStopCode : FTDCharType
     {
+       [Description("目前应该为0"), Category("EnumValue")]
+       public static int VAL0 = 0;
+
+
         public override int Length
         {
             get
@@ -765,6 +1006,7 @@ namespace FtdEncoder.Messages
 
     public class FTDSysOrderId : FTDStringType
     {
+
         public override int Length
         {
             get
@@ -784,6 +1026,7 @@ namespace FtdEncoder.Messages
 
     public class FTDTime : FTDStringType
     {
+
         public override int Length
         {
             get
@@ -803,6 +1046,7 @@ namespace FtdEncoder.Messages
 
     public class FTDTimeOut : FTDNumberType
     {
+
         public override int Length
         {
             get
@@ -822,6 +1066,7 @@ namespace FtdEncoder.Messages
 
     public class FTDTimeStamp : FTDStringType
     {
+
         public override int Length
         {
             get
@@ -841,6 +1086,7 @@ namespace FtdEncoder.Messages
 
     public class FTDUserId : FTDStringType
     {
+
         public override int Length
         {
             get
@@ -860,6 +1106,7 @@ namespace FtdEncoder.Messages
 
     public class FTDTradeId : FTDStringType
     {
+
         public override int Length
         {
             get
@@ -879,6 +1126,16 @@ namespace FtdEncoder.Messages
 
     public class FTDTradeRight : FTDCharType
     {
+       [Description("完全"), Category("EnumValue")]
+       public static int VAL0 = 0;
+
+       [Description("只可平"), Category("EnumValue")]
+       public static int VAL1 = 1;
+
+       [Description("不准交易"), Category("EnumValue")]
+       public static int VAL2 = 2;
+
+
         public override int Length
         {
             get
@@ -898,6 +1155,10 @@ namespace FtdEncoder.Messages
 
     public class FTDUserStatus : FTDCharType
     {
+       [Description("目前应该为0"), Category("EnumValue")]
+       public static int VAL0 = 0;
+
+
         public override int Length
         {
             get
@@ -917,6 +1178,10 @@ namespace FtdEncoder.Messages
 
     public class FTDUserType : FTDCharType
     {
+       [Description("目前应该为0"), Category("EnumValue")]
+       public static int VAL0 = 0;
+
+
         public override int Length
         {
             get
@@ -936,6 +1201,10 @@ namespace FtdEncoder.Messages
 
     public class FTDTradeType : FTDCharType
     {
+       [Description("目前应该为0"), Category("EnumValue")]
+       public static int VAL0 = 0;
+
+
         public override int Length
         {
             get
@@ -955,6 +1224,7 @@ namespace FtdEncoder.Messages
 
     public class FTDValue : FTDFloatType
     {
+
         public override int Length
         {
             get
@@ -974,6 +1244,7 @@ namespace FtdEncoder.Messages
 
     public class FTDVolume : FTDIntType
     {
+
         public override int Length
         {
             get
@@ -993,6 +1264,13 @@ namespace FtdEncoder.Messages
 
     public class FTDVolumeType : FTDCharType
     {
+       [Description("增量"), Category("EnumValue")]
+       public static int VAL0 = 0;
+
+       [Description("绝对量"), Category("EnumValue")]
+       public static int VAL1 = 1;
+
+
         public override int Length
         {
             get
@@ -1012,6 +1290,7 @@ namespace FtdEncoder.Messages
 
     public class FTDAbstract : FTDStringType
     {
+
         public override int Length
         {
             get
@@ -1031,6 +1310,7 @@ namespace FtdEncoder.Messages
 
     public class FTDComeFrom : FTDStringType
     {
+
         public override int Length
         {
             get
@@ -1050,6 +1330,7 @@ namespace FtdEncoder.Messages
 
     public class FTDContent : FTDStringType
     {
+
         public override int Length
         {
             get
@@ -1069,6 +1350,7 @@ namespace FtdEncoder.Messages
 
     public class FTDCurrency : FTDStringType
     {
+
         public override int Length
         {
             get
@@ -1088,6 +1370,7 @@ namespace FtdEncoder.Messages
 
     public class FTDErrorText : FTDStringType
     {
+
         public override int Length
         {
             get
@@ -1107,6 +1390,7 @@ namespace FtdEncoder.Messages
 
     public class FTDForceExitMsg : FTDStringType
     {
+
         public override int Length
         {
             get
@@ -1126,6 +1410,7 @@ namespace FtdEncoder.Messages
 
     public class FTDFrontId : FTDStringType
     {
+
         public override int Length
         {
             get
@@ -1145,6 +1430,7 @@ namespace FtdEncoder.Messages
 
     public class FTDFusepoint : FTDStringType
     {
+
         public override int Length
         {
             get
@@ -1164,6 +1450,7 @@ namespace FtdEncoder.Messages
 
     public class FTDIpAddr : FTDStringType
     {
+
         public override int Length
         {
             get
@@ -1183,6 +1470,7 @@ namespace FtdEncoder.Messages
 
     public class FTDURLLink : FTDStringType
     {
+
         public override int Length
         {
             get
@@ -1202,6 +1490,7 @@ namespace FtdEncoder.Messages
 
     public class FTDTimeSpan : FTDNumberType
     {
+
         public override int Length
         {
             get
@@ -1215,630 +1504,6 @@ namespace FtdEncoder.Messages
             get
             {
                 return 0;
-            }
-        }
-    }
-
-    [Description("错误响应"), Category("dialog")]
-    public class Error : Packet
-    {
-        public override ushort TId
-        {
-            get
-            {
-                return 0x0001;
-            }
-        }
-    }
-
-    [Description("强制退出"), Category("none")]
-    public class ForceExit : Packet
-    {
-        public override ushort TId
-        {
-            get
-            {
-                return 0x1005;
-            }
-        }
-    }
-
-    [Description("合约参数改变通知"), Category("broadcast")]
-    public class InstrumentChangeNotify : Packet
-    {
-        public override ushort TId
-        {
-            get
-            {
-                return 0x2007;
-            }
-        }
-    }
-
-    [Description("合约状态改变通知"), Category("broadcast")]
-    public class InstrumentStatusChangeNotify : Packet
-    {
-        public override ushort TId
-        {
-            get
-            {
-                return 0x2006;
-            }
-        }
-    }
-
-    [Description("交易所告示广播"), Category("broadcast")]
-    public class MarketBulletin : Packet
-    {
-        public override ushort TId
-        {
-            get
-            {
-                return 0x2003;
-            }
-        }
-    }
-
-    [Description("市场状态改变通知"), Category("broadcast")]
-    public class MarketStatusChangeNotify : Packet
-    {
-        public override ushort TId
-        {
-            get
-            {
-                return 0x2005;
-            }
-        }
-    }
-
-    [Description("增量成交行情"), Category("broadcast")]
-    public class MarketMatchIncData : Packet
-    {
-        public override ushort TId
-        {
-            get
-            {
-                return 0x2002;
-            }
-        }
-    }
-
-    [Description("成交行情"), Category("broadcast")]
-    public class MarketMatchData : Packet
-    {
-        public override ushort TId
-        {
-            get
-            {
-                return 0x2004;
-            }
-        }
-    }
-
-    [Description("报单确认"), Category("private")]
-    public class OrderConfirmation : Packet
-    {
-        public override ushort TId
-        {
-            get
-            {
-                return 0x1003;
-            }
-        }
-    }
-
-    [Description("增量报单行情"), Category("broadcast")]
-    public class MarketOrderIncData : Packet
-    {
-        public override ushort TId
-        {
-            get
-            {
-                return 0x2001;
-            }
-        }
-    }
-
-    [Description("会员告示"), Category("private")]
-    public class ParticipantBulletin : Packet
-    {
-        public override ushort TId
-        {
-            get
-            {
-                return 0x1002;
-            }
-        }
-    }
-
-    [Description("报单操作请求"), Category("dialog")]
-    public class ReqOrderAction : Packet
-    {
-        public override ushort TId
-        {
-            get
-            {
-                return 0x0004;
-            }
-        }
-    }
-
-    [Description("报单录入"), Category("dialog")]
-    public class ReqOrderInsert : Packet
-    {
-        public override ushort TId
-        {
-            get
-            {
-                return 0x0003;
-            }
-        }
-    }
-
-    [Description("客户信息查询"), Category("dialog")]
-    public class ReqQryClient : Packet
-    {
-        public override ushort TId
-        {
-            get
-            {
-                return 0x000C;
-            }
-        }
-    }
-
-    [Description("会员资金查询"), Category("dialog")]
-    public class ReqQryDeposit : Packet
-    {
-        public override ushort TId
-        {
-            get
-            {
-                return 0x0008;
-            }
-        }
-    }
-
-    [Description("合约查询"), Category("dialog")]
-    public class ReqQryInstrument : Packet
-    {
-        public override ushort TId
-        {
-            get
-            {
-                return 0x0005;
-            }
-        }
-    }
-
-    [Description("查询合约交易状态请求"), Category("dialog")]
-    public class ReqQryInstrumentStatus : Packet
-    {
-        public override ushort TId
-        {
-            get
-            {
-                return 0x000E;
-            }
-        }
-    }
-
-    [Description("市场查询请求"), Category("dialog")]
-    public class ReqQryMarket : Packet
-    {
-        public override ushort TId
-        {
-            get
-            {
-                return 0x000B;
-            }
-        }
-    }
-
-    [Description("查询市场交易状态请求"), Category("dialog")]
-    public class ReqQryMarketStatus : Packet
-    {
-        public override ushort TId
-        {
-            get
-            {
-                return 0x000D;
-            }
-        }
-    }
-
-    [Description("报单查询"), Category("dialog")]
-    public class ReqQryOrder : Packet
-    {
-        public override ushort TId
-        {
-            get
-            {
-                return 0x0006;
-            }
-        }
-    }
-
-    [Description("报单行情查询请求"), Category("dialog")]
-    public class ReqQryMarketOrderData : Packet
-    {
-        public override ushort TId
-        {
-            get
-            {
-                return 0x0012;
-            }
-        }
-    }
-
-    [Description("会员信息查询"), Category("dialog")]
-    public class ReqQryParticipant : Packet
-    {
-        public override ushort TId
-        {
-            get
-            {
-                return 0x0013;
-            }
-        }
-    }
-
-    [Description("会员客户持仓查询"), Category("dialog")]
-    public class ReqQryPosition : Packet
-    {
-        public override ushort TId
-        {
-            get
-            {
-                return 0x000A;
-            }
-        }
-    }
-
-    [Description("会员持仓查询"), Category("dialog")]
-    public class ReqQryPPosition : Packet
-    {
-        public override ushort TId
-        {
-            get
-            {
-                return 0x0009;
-            }
-        }
-    }
-
-    [Description("成交行情查询"), Category("dialog")]
-    public class ReqQryMarketMatchData : Packet
-    {
-        public override ushort TId
-        {
-            get
-            {
-                return 0x0002;
-            }
-        }
-    }
-
-    [Description("成交单查询"), Category("dialog")]
-    public class ReqQryTrade : Packet
-    {
-        public override ushort TId
-        {
-            get
-            {
-                return 0x0007;
-            }
-        }
-    }
-
-    [Description("查询交易员请求"), Category("dialog")]
-    public class ReqQryUser : Packet
-    {
-        public override ushort TId
-        {
-            get
-            {
-                return 0x0014;
-            }
-        }
-    }
-
-    [Description("交易员在线查询"), Category("dialog")]
-    public class ReqQryUserLogin : Packet
-    {
-        public override ushort TId
-        {
-            get
-            {
-                return 0x0015;
-            }
-        }
-    }
-
-    [Description("交易员登录请求"), Category("none")]
-    public class ReqUserLogin : Packet
-    {
-        public override ushort TId
-        {
-            get
-            {
-                return 0x0016;
-            }
-        }
-    }
-
-    [Description("交易员登录退出"), Category("none")]
-    public class ReqUserLogout : Packet
-    {
-        public override ushort TId
-        {
-            get
-            {
-                return 0x0017;
-            }
-        }
-    }
-
-    [Description("交易员修改密码"), Category("dialog")]
-    public class ReqUserPasswordUpdate : Packet
-    {
-        public override ushort TId
-        {
-            get
-            {
-                return 0x0018;
-            }
-        }
-    }
-
-    [Description("交易员在线查询应答"), Category("dialog")]
-    public class RspQryUserLogin : Packet
-    {
-        public override ushort TId
-        {
-            get
-            {
-                return 0x0015;
-            }
-        }
-    }
-
-    [Description("报单操作应答"), Category("dialog")]
-    public class RspOrderAction : Packet
-    {
-        public override ushort TId
-        {
-            get
-            {
-                return 0x0004;
-            }
-        }
-    }
-
-    [Description("报单应答"), Category("dialog")]
-    public class RspOrderInsert : Packet
-    {
-        public override ushort TId
-        {
-            get
-            {
-                return 0x0003;
-            }
-        }
-    }
-
-    [Description("客户信息查询应答"), Category("dialog")]
-    public class RspQryClient : Packet
-    {
-        public override ushort TId
-        {
-            get
-            {
-                return 0x000C;
-            }
-        }
-    }
-
-    [Description("会员资金查询应答"), Category("dialog")]
-    public class RspQryDeposit : Packet
-    {
-        public override ushort TId
-        {
-            get
-            {
-                return 0x0008;
-            }
-        }
-    }
-
-    [Description("合约查询应答"), Category("dialog")]
-    public class RspQryInstrument : Packet
-    {
-        public override ushort TId
-        {
-            get
-            {
-                return 0x0005;
-            }
-        }
-    }
-
-    [Description("查询合约交易状态应答"), Category("dialog")]
-    public class RspQryInstrumentStatus : Packet
-    {
-        public override ushort TId
-        {
-            get
-            {
-                return 0x000E;
-            }
-        }
-    }
-
-    [Description("市场查询应答"), Category("dialog")]
-    public class RspQryMarket : Packet
-    {
-        public override ushort TId
-        {
-            get
-            {
-                return 0x000B;
-            }
-        }
-    }
-
-    [Description("查询市场交易状态应答"), Category("dialog")]
-    public class RspQryMarketStatus : Packet
-    {
-        public override ushort TId
-        {
-            get
-            {
-                return 0x000D;
-            }
-        }
-    }
-
-    [Description("报单查询应答"), Category("dialog")]
-    public class RspQryOrder : Packet
-    {
-        public override ushort TId
-        {
-            get
-            {
-                return 0x0006;
-            }
-        }
-    }
-
-    [Description("报单行情查询应答"), Category("dialog")]
-    public class RspQryMarketOrderData : Packet
-    {
-        public override ushort TId
-        {
-            get
-            {
-                return 0x0012;
-            }
-        }
-    }
-
-    [Description("会员信息查询应答"), Category("dialog")]
-    public class RspQryParticipant : Packet
-    {
-        public override ushort TId
-        {
-            get
-            {
-                return 0x0013;
-            }
-        }
-    }
-
-    [Description("会员客户持仓查询应答"), Category("dialog")]
-    public class RspQryPosition : Packet
-    {
-        public override ushort TId
-        {
-            get
-            {
-                return 0x000A;
-            }
-        }
-    }
-
-    [Description("会员持仓查询应答"), Category("dialog")]
-    public class RspQryPPosition : Packet
-    {
-        public override ushort TId
-        {
-            get
-            {
-                return 0x0009;
-            }
-        }
-    }
-
-    [Description("成交行情查询应答"), Category("dialog")]
-    public class RspQryMarketMatchData : Packet
-    {
-        public override ushort TId
-        {
-            get
-            {
-                return 0x0002;
-            }
-        }
-    }
-
-    [Description("成交单查询应答"), Category("dialog")]
-    public class RspQryTrade : Packet
-    {
-        public override ushort TId
-        {
-            get
-            {
-                return 0x0007;
-            }
-        }
-    }
-
-    [Description("查询交易员应答"), Category("dialog")]
-    public class RspQryUser : Packet
-    {
-        public override ushort TId
-        {
-            get
-            {
-                return 0x0014;
-            }
-        }
-    }
-
-    [Description("交易员登录应答"), Category("none")]
-    public class RspUserLogin : Packet
-    {
-        public override ushort TId
-        {
-            get
-            {
-                return 0x0016;
-            }
-        }
-    }
-
-    [Description("交易员登录退出应答"), Category("none")]
-    public class RspUserLogout : Packet
-    {
-        public override ushort TId
-        {
-            get
-            {
-                return 0x0017;
-            }
-        }
-    }
-
-    [Description("交易员修改密码应答"), Category("dialog")]
-    public class RspUserPasswordUpdate : Packet
-    {
-        public override ushort TId
-        {
-            get
-            {
-                return 0x0018;
-            }
-        }
-    }
-
-    [Description("单边成交回报"), Category("private")]
-    public class TradeInsertSingle : Packet
-    {
-        public override ushort TId
-        {
-            get
-            {
-                return 0x1001;
             }
         }
     }
@@ -3574,6 +3239,630 @@ namespace FtdEncoder.Messages
             get
             {
                 return 0x002C;
+            }
+        }
+    }
+
+    [Description("错误响应"), Category("dialog")]
+    public class Error : Packet
+    {
+        public override ushort TId
+        {
+            get
+            {
+                return 0x0001;
+            }
+        }
+    }
+
+    [Description("强制退出"), Category("none")]
+    public class ForceExit : Packet
+    {
+        public override ushort TId
+        {
+            get
+            {
+                return 0x1005;
+            }
+        }
+    }
+
+    [Description("合约参数改变通知"), Category("broadcast")]
+    public class InstrumentChangeNotify : Packet
+    {
+        public override ushort TId
+        {
+            get
+            {
+                return 0x2007;
+            }
+        }
+    }
+
+    [Description("合约状态改变通知"), Category("broadcast")]
+    public class InstrumentStatusChangeNotify : Packet
+    {
+        public override ushort TId
+        {
+            get
+            {
+                return 0x2006;
+            }
+        }
+    }
+
+    [Description("交易所告示广播"), Category("broadcast")]
+    public class MarketBulletin : Packet
+    {
+        public override ushort TId
+        {
+            get
+            {
+                return 0x2003;
+            }
+        }
+    }
+
+    [Description("市场状态改变通知"), Category("broadcast")]
+    public class MarketStatusChangeNotify : Packet
+    {
+        public override ushort TId
+        {
+            get
+            {
+                return 0x2005;
+            }
+        }
+    }
+
+    [Description("增量成交行情"), Category("broadcast")]
+    public class MarketMatchIncData : Packet
+    {
+        public override ushort TId
+        {
+            get
+            {
+                return 0x2002;
+            }
+        }
+    }
+
+    [Description("成交行情"), Category("broadcast")]
+    public class MarketMatchData : Packet
+    {
+        public override ushort TId
+        {
+            get
+            {
+                return 0x2004;
+            }
+        }
+    }
+
+    [Description("报单确认"), Category("private")]
+    public class OrderConfirmation : Packet
+    {
+        public override ushort TId
+        {
+            get
+            {
+                return 0x1003;
+            }
+        }
+    }
+
+    [Description("增量报单行情"), Category("broadcast")]
+    public class MarketOrderIncData : Packet
+    {
+        public override ushort TId
+        {
+            get
+            {
+                return 0x2001;
+            }
+        }
+    }
+
+    [Description("会员告示"), Category("private")]
+    public class ParticipantBulletin : Packet
+    {
+        public override ushort TId
+        {
+            get
+            {
+                return 0x1002;
+            }
+        }
+    }
+
+    [Description("报单操作请求"), Category("dialog")]
+    public class ReqOrderAction : Packet
+    {
+        public override ushort TId
+        {
+            get
+            {
+                return 0x0004;
+            }
+        }
+    }
+
+    [Description("报单录入"), Category("dialog")]
+    public class ReqOrderInsert : Packet
+    {
+        public override ushort TId
+        {
+            get
+            {
+                return 0x0003;
+            }
+        }
+    }
+
+    [Description("客户信息查询"), Category("dialog")]
+    public class ReqQryClient : Packet
+    {
+        public override ushort TId
+        {
+            get
+            {
+                return 0x000C;
+            }
+        }
+    }
+
+    [Description("会员资金查询"), Category("dialog")]
+    public class ReqQryDeposit : Packet
+    {
+        public override ushort TId
+        {
+            get
+            {
+                return 0x0008;
+            }
+        }
+    }
+
+    [Description("合约查询"), Category("dialog")]
+    public class ReqQryInstrument : Packet
+    {
+        public override ushort TId
+        {
+            get
+            {
+                return 0x0005;
+            }
+        }
+    }
+
+    [Description("查询合约交易状态请求"), Category("dialog")]
+    public class ReqQryInstrumentStatus : Packet
+    {
+        public override ushort TId
+        {
+            get
+            {
+                return 0x000E;
+            }
+        }
+    }
+
+    [Description("市场查询请求"), Category("dialog")]
+    public class ReqQryMarket : Packet
+    {
+        public override ushort TId
+        {
+            get
+            {
+                return 0x000B;
+            }
+        }
+    }
+
+    [Description("查询市场交易状态请求"), Category("dialog")]
+    public class ReqQryMarketStatus : Packet
+    {
+        public override ushort TId
+        {
+            get
+            {
+                return 0x000D;
+            }
+        }
+    }
+
+    [Description("报单查询"), Category("dialog")]
+    public class ReqQryOrder : Packet
+    {
+        public override ushort TId
+        {
+            get
+            {
+                return 0x0006;
+            }
+        }
+    }
+
+    [Description("报单行情查询请求"), Category("dialog")]
+    public class ReqQryMarketOrderData : Packet
+    {
+        public override ushort TId
+        {
+            get
+            {
+                return 0x0012;
+            }
+        }
+    }
+
+    [Description("会员信息查询"), Category("dialog")]
+    public class ReqQryParticipant : Packet
+    {
+        public override ushort TId
+        {
+            get
+            {
+                return 0x0013;
+            }
+        }
+    }
+
+    [Description("会员客户持仓查询"), Category("dialog")]
+    public class ReqQryPosition : Packet
+    {
+        public override ushort TId
+        {
+            get
+            {
+                return 0x000A;
+            }
+        }
+    }
+
+    [Description("会员持仓查询"), Category("dialog")]
+    public class ReqQryPPosition : Packet
+    {
+        public override ushort TId
+        {
+            get
+            {
+                return 0x0009;
+            }
+        }
+    }
+
+    [Description("成交行情查询"), Category("dialog")]
+    public class ReqQryMarketMatchData : Packet
+    {
+        public override ushort TId
+        {
+            get
+            {
+                return 0x0002;
+            }
+        }
+    }
+
+    [Description("成交单查询"), Category("dialog")]
+    public class ReqQryTrade : Packet
+    {
+        public override ushort TId
+        {
+            get
+            {
+                return 0x0007;
+            }
+        }
+    }
+
+    [Description("查询交易员请求"), Category("dialog")]
+    public class ReqQryUser : Packet
+    {
+        public override ushort TId
+        {
+            get
+            {
+                return 0x0014;
+            }
+        }
+    }
+
+    [Description("交易员在线查询"), Category("dialog")]
+    public class ReqQryUserLogin : Packet
+    {
+        public override ushort TId
+        {
+            get
+            {
+                return 0x0015;
+            }
+        }
+    }
+
+    [Description("交易员登录请求"), Category("none")]
+    public class ReqUserLogin : Packet
+    {
+        public override ushort TId
+        {
+            get
+            {
+                return 0x0016;
+            }
+        }
+    }
+
+    [Description("交易员登录退出"), Category("none")]
+    public class ReqUserLogout : Packet
+    {
+        public override ushort TId
+        {
+            get
+            {
+                return 0x0017;
+            }
+        }
+    }
+
+    [Description("交易员修改密码"), Category("dialog")]
+    public class ReqUserPasswordUpdate : Packet
+    {
+        public override ushort TId
+        {
+            get
+            {
+                return 0x0018;
+            }
+        }
+    }
+
+    [Description("交易员在线查询应答"), Category("dialog")]
+    public class RspQryUserLogin : Packet
+    {
+        public override ushort TId
+        {
+            get
+            {
+                return 0x0015;
+            }
+        }
+    }
+
+    [Description("报单操作应答"), Category("dialog")]
+    public class RspOrderAction : Packet
+    {
+        public override ushort TId
+        {
+            get
+            {
+                return 0x0004;
+            }
+        }
+    }
+
+    [Description("报单应答"), Category("dialog")]
+    public class RspOrderInsert : Packet
+    {
+        public override ushort TId
+        {
+            get
+            {
+                return 0x0003;
+            }
+        }
+    }
+
+    [Description("客户信息查询应答"), Category("dialog")]
+    public class RspQryClient : Packet
+    {
+        public override ushort TId
+        {
+            get
+            {
+                return 0x000C;
+            }
+        }
+    }
+
+    [Description("会员资金查询应答"), Category("dialog")]
+    public class RspQryDeposit : Packet
+    {
+        public override ushort TId
+        {
+            get
+            {
+                return 0x0008;
+            }
+        }
+    }
+
+    [Description("合约查询应答"), Category("dialog")]
+    public class RspQryInstrument : Packet
+    {
+        public override ushort TId
+        {
+            get
+            {
+                return 0x0005;
+            }
+        }
+    }
+
+    [Description("查询合约交易状态应答"), Category("dialog")]
+    public class RspQryInstrumentStatus : Packet
+    {
+        public override ushort TId
+        {
+            get
+            {
+                return 0x000E;
+            }
+        }
+    }
+
+    [Description("市场查询应答"), Category("dialog")]
+    public class RspQryMarket : Packet
+    {
+        public override ushort TId
+        {
+            get
+            {
+                return 0x000B;
+            }
+        }
+    }
+
+    [Description("查询市场交易状态应答"), Category("dialog")]
+    public class RspQryMarketStatus : Packet
+    {
+        public override ushort TId
+        {
+            get
+            {
+                return 0x000D;
+            }
+        }
+    }
+
+    [Description("报单查询应答"), Category("dialog")]
+    public class RspQryOrder : Packet
+    {
+        public override ushort TId
+        {
+            get
+            {
+                return 0x0006;
+            }
+        }
+    }
+
+    [Description("报单行情查询应答"), Category("dialog")]
+    public class RspQryMarketOrderData : Packet
+    {
+        public override ushort TId
+        {
+            get
+            {
+                return 0x0012;
+            }
+        }
+    }
+
+    [Description("会员信息查询应答"), Category("dialog")]
+    public class RspQryParticipant : Packet
+    {
+        public override ushort TId
+        {
+            get
+            {
+                return 0x0013;
+            }
+        }
+    }
+
+    [Description("会员客户持仓查询应答"), Category("dialog")]
+    public class RspQryPosition : Packet
+    {
+        public override ushort TId
+        {
+            get
+            {
+                return 0x000A;
+            }
+        }
+    }
+
+    [Description("会员持仓查询应答"), Category("dialog")]
+    public class RspQryPPosition : Packet
+    {
+        public override ushort TId
+        {
+            get
+            {
+                return 0x0009;
+            }
+        }
+    }
+
+    [Description("成交行情查询应答"), Category("dialog")]
+    public class RspQryMarketMatchData : Packet
+    {
+        public override ushort TId
+        {
+            get
+            {
+                return 0x0002;
+            }
+        }
+    }
+
+    [Description("成交单查询应答"), Category("dialog")]
+    public class RspQryTrade : Packet
+    {
+        public override ushort TId
+        {
+            get
+            {
+                return 0x0007;
+            }
+        }
+    }
+
+    [Description("查询交易员应答"), Category("dialog")]
+    public class RspQryUser : Packet
+    {
+        public override ushort TId
+        {
+            get
+            {
+                return 0x0014;
+            }
+        }
+    }
+
+    [Description("交易员登录应答"), Category("none")]
+    public class RspUserLogin : Packet
+    {
+        public override ushort TId
+        {
+            get
+            {
+                return 0x0016;
+            }
+        }
+    }
+
+    [Description("交易员登录退出应答"), Category("none")]
+    public class RspUserLogout : Packet
+    {
+        public override ushort TId
+        {
+            get
+            {
+                return 0x0017;
+            }
+        }
+    }
+
+    [Description("交易员修改密码应答"), Category("dialog")]
+    public class RspUserPasswordUpdate : Packet
+    {
+        public override ushort TId
+        {
+            get
+            {
+                return 0x0018;
+            }
+        }
+    }
+
+    [Description("单边成交回报"), Category("private")]
+    public class TradeInsertSingle : Packet
+    {
+        public override ushort TId
+        {
+            get
+            {
+                return 0x1001;
             }
         }
     }
